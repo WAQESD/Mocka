@@ -456,7 +456,7 @@ public class MockService {
                 case "BOOLEAN" -> String.valueOf(faker.bool().bool());
                 case "INT","INTEGER" -> Integer.toString(faker.hashCode());
                 case "FLOAT", "DOUBLE" -> Double.toString(faker.number().randomDouble(2, 1, 100)); // 소수점 두 자리, 1에서 100 사이
-                case "CHAR" -> Character.toString(faker.letterify("?").charAt(0));
+                case "CHAR", "CHARACTER" -> Character.toString(faker.letterify("?").charAt(0));
                 case "SHORT" -> Short.toString((short) faker.number().randomNumber(4, false));
                 case "BYTE" -> Byte.toString((byte) faker.number().randomNumber(2, false));
                 case "LONG" -> Long.toString(faker.number().randomNumber(10, false));
